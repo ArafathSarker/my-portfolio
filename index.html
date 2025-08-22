@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style/design.css"/>
 </head>
 <body>
-    <section class="background-color">
+    <section id="background-one">
          <nav class="navigation-bar">
         <div class="logo-div">
                  <img class="logo" src="./views/logo.png" alt="This a logo" />
@@ -20,6 +20,65 @@
         </div>
         <button class="talk-btn">Let's Talk</button>
     </nav>
+<div class="hexagon-container">
+  <svg class="hexagon" viewBox="20 -4 189.959 207.282"
+       width="35vw" height="35vw"
+       xmlns="http://www.w3.org/2000/svg"
+       preserveAspectRatio="xMidYMid meet">
+
+    <defs>
+      <!-- Gradient for the hexagon -->
+      <linearGradient id="g" x1="0" x2="1">
+        <stop offset="0%" stop-color="#27BB86"/>
+        <stop offset="100%" stop-color="#00BD95"/>
+      </linearGradient>
+
+      <!-- Normal Glow -->
+      <filter id="bottomGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="10" stdDeviation="6" flood-color="rgba(0, 194, 154, 0.4)" />
+      </filter>
+
+      <!-- Stronger Glow (for hover) -->
+      <filter id="bottomGlowHover" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="rgba(0, 194, 154, 0.9)" />
+      </filter>
+
+      <!-- Mask for the image -->
+      <mask id="hexMask">
+        <path d="M164.041 57.718 195.959 113A14 14 0 01195.959 127L164.041 182.282A14 14 0 01151.917 189.282L88.083 189.282A14 14 0 0175.959 182.282L43 125 34 46 110 10Z"
+              fill="white"
+              transform="rotate(30 120 120)"/>
+      </mask>
+    </defs>
+
+    <!-- Hexagon background with gradient and bottom glow -->
+    <path class="shape" d="
+      M 164.041 57.718
+      L 195.959 113.000
+      A 14 14 0 0 1 195.959 127.000
+      L 164.041 182.282
+      A 14 14 0 0 1 151.917 189.282
+      L 88.083 189.282
+      A 14 14 0 0 1 75.959 182.282
+      L 44.041 127.000
+      A 14 14 0 0 1 44.041 113.000
+      L 75.959 57.718
+      A 14 14 0 0 1 88.083 50.718
+      L 151.917 50.718
+      A 14 14 0 0 1 164.041 57.718
+      Z"
+      fill="url(#g)"
+      transform="rotate(30 120 120)"
+      filter="url(#bottomGlow)" />
+    
+    <!-- Profile image clipped inside the hexagon -->
+    <image href="views/profile.png"
+           x="25.041" y="-17"
+           width="200.918" height="215.564"
+           preserveAspectRatio="xMidYMax slice"
+           mask="url(#hexMask)"/>
+  </svg>
+</div>
     </section>
    <script src="./script/active-button.js"></script>
 </body>

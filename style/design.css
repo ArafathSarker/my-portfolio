@@ -7,13 +7,11 @@
      padding: 0;
      box-sizing: border-box;
 }
-body{
-     margin: 5rem;
-}
 :root{
      --bold:700;
      --gap:1rem;
      --size:1.5rem;
+     --mar:5rem;
 }
 .logo{
      width: 5rem;
@@ -36,11 +34,12 @@ body{
      font-family: system-ui, sans-serif;
      font-size:1.1rem;
      font-weight:var(--bold);
-     color:black;
+     color:white;
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: space-between;
+     margin: var(--mar);
 }
 .link-div{
      display: flex;
@@ -51,19 +50,51 @@ body{
      font-size: var(--size); 
 }
 .link-div a{
-     color:black;
+     color:white;
 }
 .link-div a:hover{
-     color:rgb(28, 125, 109);
+      color: green;
 }
 .link-div a.active {
-  color: green;
+   color:rgb(28, 125, 109);
 }
 .talk-btn{
     background: linear-gradient(90deg, rgba(39, 187, 134, 1) 0%, rgba(0, 189, 149, 1) 100%);
-font-size: var(--size);
-color: white;
-padding: 1rem 2rem;
-border-radius: 1rem;
-box-shadow: 0 8px 15px rgba(0, 189, 149, 0.4);
+     font-size: var(--size);
+     color: white;
+     padding: 1rem 2rem;
+     border-radius: 1rem;
+     box-shadow: 0 8px 15px rgba(0, 189, 149, 0.4);
 }
+.talk-btn:hover{
+      box-shadow: 0 13px 20px rgba(0, 194, 154, 0.5);
+      cursor: pointer;
+}
+#background-one{
+     background-color:#22272d;
+     width:100vw;
+     height: 100vh;
+     position: absolute;
+     z-index: -100;
+}
+.hexagon{
+     transform: translateY(-5rem);
+     float: right;
+}
+.hexagon-container .shape {
+  transition: filter 0.3s ease;
+}
+
+/* on hover make glow stronger */
+.hexagon-container:hover .shape {
+  filter: url(#bottomGlowHover);
+}
+
+
+
+
+
+
+
+
+
