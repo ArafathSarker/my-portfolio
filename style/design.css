@@ -1,12 +1,12 @@
-*{
-     box-sizing: border-box;
-     border-style: none;
-     font-style: normal;
-     text-decoration: none;
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+* {
+    box-sizing: border-box;
+    border-style: none;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
+
 :root{
      --bold:700;
      --gap:1rem;
@@ -39,8 +39,11 @@
      flex-direction: row;
      align-items: center;
      justify-content: space-between;
-     margin: var(--mar);
+     padding:2rem 5rem;
      position: sticky;
+     top:0;
+     background: #22272d;
+     z-index: 1000;
 }
 .link-div{
      display: flex;
@@ -54,7 +57,8 @@
      color:white;
 }
 .link-div a:hover{
-      color: green;
+      color: rgb(38, 145, 129)
+
 }
 .link-div a.active {
    color:rgb(28, 125, 109);
@@ -75,14 +79,11 @@
      background-color:#22272d;
      width:100vw;
      height: 100vh;
-     position: absolute;
-     z-index: -100;
 }
 .hexagon-container .shape {
   transition: filter 0.3s ease;
 }
 
-/* on hover make glow stronger */
 .hexagon-container:hover .shape {
   filter: url(#bottomGlowHover);
 }
@@ -128,13 +129,77 @@
      box-shadow: 0 20px 27px rgba(0, 194, 154, 0.5);
       cursor: pointer;
 }
+.icon-div{
+     font-family: sans-serif,monospace;
+     font-size: var(--size);
+     color:white;
+     margin-left: var(--mar);
+     display: flex;
+     flex-direction:row;
+     align-items: center;
+     gap:2rem;
+}
+.icon-div a{
+     color:white;
+     transition: all 0.3s ease;
+}
+.icon-div a:hover{
+     transform:translateY(-1rem) scale(1.5);
+     color:#006df1;
+}
+#background-two{
+     background-color:#151c24;
+     width:100vw;
+     height: 100vh;
+}
 
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+    .link-div,.talk-btn{
+     display: none;
+    }
+    .logo{
+     width: 2rem;
+     height: 2rem;
+}
+.logo +p{
+     font-size: 1.2rem; 
+}
+.logo-div{
+    gap:0.2rem;
+}
+.navigation-bar{
+     padding:1rem;
+}
+#background-one{
+     height: 110vh;
+}  
+   .introduction{
+     flex-direction: column;
+     margin:0 1rem;
+   }
+   .name-div{
+     font-size:1.5rem;
+   }
+   .profile-sec{
+     flex-direction: column-reverse;
+     gap:10rem;
+   }
+   .about-myself{
+     width:100%;
+     font-size: 1rem;
+   }
+   .talk-btn-1{
+      width: 100%;
+      padding: 1rem;
+   }
+   .hexagon{
+     transform: scale(2) translate(-0.5rem,2rem);
+   }
+   .icon-div{
+     font-size: 1.3rem;
+     margin:2.5rem 1rem 0rem 1rem;
+     gap:1rem;
+     max-width:100%;
+   }
+}
 
