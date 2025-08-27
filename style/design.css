@@ -156,8 +156,9 @@
      display: none;
     }
     .three-dot{
-   transform: translateX(6rem);   
-         }
+        position:absolute;
+        right: 1rem;   
+     }
     .logo{
      width: 2rem;
      height: 2rem;
