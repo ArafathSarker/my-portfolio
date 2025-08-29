@@ -91,7 +91,7 @@
      margin-left: var(--mar);
      display: flex;
      flex-direction: column;
-     gap:3rem;
+     gap:5rem;
 }
 .profile-sec{
      display: flex;
@@ -101,6 +101,7 @@
      align-items: center;
 }
 .about-myself{
+     font-family: sans-serif,monospace;
      text-align: justify;
      font-size: 1.2rem;
      width:75%;
@@ -151,6 +152,57 @@
      height: 100vh;
 }
 
+#background-two .about{
+     margin-left: var(--mar);
+     margin-right: 5rem;
+     color:white;
+     font-family:sans-serif,monospace;
+     transform: translateY(var(--mar));
+     font-size:2rem;
+}
+.about-me-container{
+     display:flex;
+     flex-direction: row;
+     justify-content: space-between;
+     text-align:left;
+     margin-left: var(--mar);
+     color:white;
+     font-family:sans-serif,monospace;
+     font-size: var(--size);
+     transform: translateY(8rem);
+}
+.about-me{
+     font-family: sans-serif,monospace;
+     font-size: 1.2rem;
+     text-align: justify;
+     transform: translateY(6rem);
+    
+}
+.about-me-container .for-p{
+     display:flex;
+     flex-direction: column;
+     gap:2rem;
+}
+.about-me-container .ushape-container{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     justify-items: center;
+}
+
+/* base filter + smooth transition */
+.ushape-container .u-shape {
+  filter: url(#bottomGlow1);
+  transition: filter .3s ease;
+}
+
+/* on hover, swap to stronger glow */
+.ushape-container:hover .u-shape {
+  filter: url(#bottomGlowHover1);
+}
+
+
+/* For mobile version */
 @media (max-width: 768px) {
     .link-div,.talk-btn{
      display: none;
@@ -219,5 +271,31 @@
      gap:1rem;
      max-width:100%;
    }
+    #background-two{
+     height: 150vh;
+    }
+   .about-me-container{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    transform: translateY(12rem);
+   }
+   #background-two .about{
+     margin-left:1rem;
+     margin-right: 1rem;
+     font-size:1.5rem;
+ }
+
+ .u-shapesvg{
+     transform: scale(2);
+ }
+ .about-me{
+     font-size: 1rem;
+     margin-right: 1rem;  
+     
+}
+
+
 }
 

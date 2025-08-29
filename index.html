@@ -31,14 +31,8 @@
     <p class="about-myself">
       CSE student passionate about AI & Machine Learning, building intelligent and impactful systems.
      Skilled in full-stack web development, blending software engineering with smart solutions.
-    Open to collaboration on challenging projects — let's innovate together!
-<!-- <a href="mailto:arafathmd432@gmail.com"
-style="color:black;
-text-decoration: none;
-background-color: #A9A9A9;
-border-radius: 5px;
-"
->Send an Email</a> -->
+    Open to collaboration on challenging projects — <span style="font-weight: bold;">let's innovate together!</span>
+
     </p>
     <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/">
        <button class="talk-btn-1">Let's Talk</button></a>
@@ -96,8 +90,8 @@ border-radius: 5px;
     
     <!-- Profile image clipped inside the hexagon -->
     <image href="views/profile.png"
-           x="25.041" y="-17"
-           width="200.918" height="215.564"
+           x="15.041" y="-17"
+           width="200.918" height="240.564"
            preserveAspectRatio="xMidYMax slice"
            mask="url(#hexMask)"/>
   </svg>
@@ -116,8 +110,82 @@ border-radius: 5px;
 </div>
     </section>
 <section id="background-two">
+   <h1 class="about">About <span style="color:rgb(45, 163, 140)">Me</span></h1>
+  <div class="about-me-container">
+    <div class="for-p">
+    <p class="about-me">
+   Hello! My name is Arafath, and I am a Computer Science and Engineering (CSE) 
+   student with a strong passion for coding, problem-solving, and continuous learning.
+    My journey in technology began with curiosity, and over time it has grown into a commitment to build innovative, practical, and impactful solutions.
+I specialize in the MERN stack (MongoDB, Express.js, React, Node.js), 
+where I enjoy creating modern, scalable, and user-friendly web applications.
+ From crafting intuitive interfaces to designing efficient back-end systems,
+  I love the challenge of working across the full stack.
+ 
+    Alongside web development, I am exploring the field of Artificial 
+    Intelligence and Machine Learning, aiming to design intelligent systems 
+    that can make technology more powerful and meaningful. I am particularly
+     interested in combining AI with software engineering to create solutions 
+     that improve everyday life.
 
+What motivates me is growth and curiosity — whether it’s learning a new framework,
+ experimenting with emerging technologies, or tackling complex projects,
+  I’m always eager to expand my skill set. Collaboration excites me, 
+  and I’m actively seeking opportunities to work on challenging and 
+  meaningful projects where I can both contribute and learn.
+  
+   Outside of academics and coding, I enjoy keeping an active lifestyle.
+    I love playing football and badminton, which not only keep me 
+    fit but also teach me about teamwork and strategy. 
+    I also enjoy exploring new places, as traveling allows me to experience 
+    different perspectives, cultures, and ideas — something that inspires my 
+    creativity as a developer.
+    My goal is to grow as a developer, problem-solver, and lifelong learner, while making a positive impact through technology.
+    </p>
+   <p class="about-me">
+    Feel free to reach out at  <a href="mailto:arafathmd432@gmail.com"
+style="color:black;
+text-decoration: none;
+background-color: #A9A9A9;
+border-radius: 5px;
+"
+>arafathmd432@gmail.com</a>
+ — I’d be happy to connect, collaborate, or even just have a chat about tech, sports, or travel!
+  </p>
+  </div>
+ <div class="ushape-container">
+  <svg class="u-shapesvg" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 200 300" width="35vw" height="35vw" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <path id="u-shape" d="M50 0 L50 200 A100 100 0 0 0 250 200 L250 0 Z"/>
+      <mask id="u-mask"><use href="#u-shape" fill="white"/></mask>
+
+      <linearGradient id="g1" x1="0" x2="1">
+        <stop offset="0%" stop-color="#27BB86"/>
+        <stop offset="100%" stop-color="#00BD95"/>
+      </linearGradient>
+
+      <!-- filters as you had them -->
+      <filter id="bottomGlow1" x="-70%" y="-70%" width="240%" height="240%">
+        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(0, 194, 154, 0.3)" />
+        <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(0, 194, 154, 0.3)" />
+        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0, 194, 154, 0.3)" />
+      </filter>
+      <filter id="bottomGlowHover1" x="-70%" y="-70%" width="240%" height="240%">
+        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(0, 194, 154, 0.3)" />
+        <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(0, 194, 154, 0.6)" />
+        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0, 194, 154, 1)" />
+      </filter>
+    </defs>
+
+    <!-- add a class here; remove inline filter -->
+    <use href="#u-shape" class="u-shape" fill="url(#g1)"/>
+
+    <image href="./views/profile1.png" x="0" y="0" width="300" height="300" mask="url(#u-mask)"/>
+  </svg>
+</div>
+  </div>
 </section>
+
    <script src="./script/active-button.js"></script>
 </body>
 </html>
