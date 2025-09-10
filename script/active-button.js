@@ -16,7 +16,9 @@ if(window.innerWidth<=768){
  }
 
 
- document.querySelector(".fa-bars").addEventListener('click',()=>{
+const faBar = document.querySelector(".fa-bars");
+if(faBar){
+faBar.addEventListener('click',()=>{
   if(document.querySelector(".link-div").className == "link-div"){
     document.querySelector(".navigation-bar").after(document.querySelector(".link-div"));
     document.querySelector(".link-div").classList.add("column-nav"); 
@@ -26,7 +28,26 @@ if(window.innerWidth<=768){
     else document.querySelector(".link-div").classList.remove("column-nav");
 
  });
+}
 
+const nextBtns = document.querySelectorAll(".next-fun");
+const prevBtns = document.querySelectorAll(".prev-fun");
+const container = document.querySelector(".main-card");
+
+nextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lastCard = container.lastElementChild;
+    container.prepend(lastCard); // move last to first
+  });
+});
+
+
+prevBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const firstCard = container.firstElementChild;
+    container.appendChild(firstCard); // move first to last
+  });
+});
 
 
 
