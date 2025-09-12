@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const shape = document.querySelector(".u-shapesvg");
     const section = document.getElementById("background-two");
     const aboutMe = document.querySelector('.about-me');
-     const btn = document.querySelector(".toggle-btn");
+    const btn = document.querySelector(".toggle-btn");
     const about = document.querySelector(".about");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -82,6 +82,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
     observer.observe(section);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+ const projectIntro1 = document.querySelector('.project-intro > :nth-child(1)');
+    const projectIntro2 = document.querySelector('.project-intro > :nth-child(2)');
+    const section = document.getElementById("background-three");
+    const ProjectCard1 = document.querySelector(".project-card1");
+    const ProjectCard2 = document.querySelector(".project-card2");
+    const ProjectCard3 = document.querySelector(".project-card3");
+    const prevButton = document.querySelector(".prev-btn");
+    const nextBtutton = document.querySelector(".next-btn"); 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              projectIntro1.style.animation="none";
+              projectIntro2.style.animation="none";
+              ProjectCard1.style.animation="none";
+              ProjectCard2.style.animation="none";
+               ProjectCard3.style.animation="none";
+               prevButton.style.animation="none";
+               nextBtutton.style.animation="none";
+               void projectIntro1.offsetWidth;
+                void projectIntro2.offsetWidth;
+                void ProjectCard1.offsetWidth;
+                void ProjectCard2.offsetWidth;
+                void ProjectCard3.offsetWidth;
+                void prevButton .offsetWidth;
+                void nextBtutton.offsetWidth;
+                prevButton.style.animation="prevBtnAnimation 1s ease-in-out forwards";
+                nextBtutton.style.animation="nextBtnAnimation 1s ease-in-out forwards";
+                ProjectCard1.style.animation ="projectCardsAnimation 1s ease-in-out forwards";
+                ProjectCard2.style.animation ="projectCardsAnimation1 1s ease-in-out forwards";
+                ProjectCard3.style.animation ="projectCardsAnimation2 1s ease-in-out forwards";
+                projectIntro1.style.animation = "ProjectIntroHAnimation 1s ease-in-out forwards";
+                projectIntro2.style.animation = "ProjectIntroPAnimation 1s ease-in-out forwards";
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(section);
+});
+
 
 function toggleContent() {
     const moreContent = document.getElementById("more-content");

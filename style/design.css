@@ -524,10 +524,38 @@
      font-family: sans-serif,monospace;
      font-size: 1.2rem;
      transform: translateY(var(--mar));
+     
 }
 .project-intro p{
      width:40%;
      text-align: center;
+}
+.project-intro > :nth-child(1){
+    opacity: 0;
+}
+
+@keyframes ProjectIntroHAnimation{
+     from{
+               transform: translateX(10rem);
+               opacity: 0;
+     }
+     to{
+         transform: translatex(0);
+         opacity: 1;
+     }
+}
+.project-intro > :nth-child(2){
+   opacity: 0;
+}
+@keyframes ProjectIntroPAnimation{
+     from{
+               transform: translateX(-10rem);
+               opacity: 0;
+     }
+     to{
+         transform: translatex(0);
+         opacity: 1;
+     }
 }
 .project-container{
    display:flex;
@@ -541,12 +569,49 @@
   height: 35vh;
   border-radius: 2rem;
   overflow: hidden; 
+  opacity: 0;
 }
 .project-card1 {
   background-color: #4d5353;
 }
 .project-card2,.project-card3{
   background-color:#2e3440;
+}
+@keyframes projectCardsAnimation1 {
+     from{
+          opacity: 0;
+          transform: translateX(-10rem);
+
+     }
+     to{
+            opacity:1;
+            transform: translateY(0);
+     }
+     
+}
+@keyframes projectCardsAnimation {
+     from{
+          opacity: 0;
+          transform: translateY(-10rem);
+
+     }
+     to{
+            opacity:1;
+            transform: translateY(0);
+     }
+     
+}
+@keyframes projectCardsAnimation2 {
+     from{
+          opacity: 0;
+          transform: translateX(10rem);
+
+     }
+     to{
+            opacity:1;
+            transform: translateY(0);
+     }
+     
 }
 .imageStyle {
   width: 100%;
@@ -613,6 +678,18 @@
     border: none;
     border-radius: 100% 58% 58% 100% / 80%;
     transition: all 0.2s;
+    opacity: 0;
+}
+@keyframes prevBtnAnimation {
+      from{
+          opacity:0;
+          transform: translateX(10rem);
+     }
+     to{
+          opacity:1;
+          transform: translateX(0);
+     }
+     
 }
 .prev-btn:active{
      transform: scale(0.9);
@@ -629,7 +706,20 @@
     align-items: center;
     border: none;
     border-radius: 58% 100% 100% 58% / 80%;
+    opacity: 0;
     transition: all 0.2s;
+    
+}
+@keyframes nextBtnAnimation {
+     from{
+          opacity:0;
+          transform: translateY(-10rem);
+     }
+     to{
+          opacity:1;
+          transform: translateY(0);
+     }
+     
 }
 .next-btn:active{
      transform: scale(0.9);
