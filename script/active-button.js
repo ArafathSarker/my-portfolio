@@ -49,6 +49,64 @@ prevBtns.forEach(btn => {
   });
 });
 
+  
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const shape = document.querySelector(".u-shapesvg");
+    const section = document.getElementById("background-two");
+    const aboutMe = document.querySelector('.about-me');
+     const btn = document.querySelector(".toggle-btn");
+    const about = document.querySelector(".about");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Restart animation
+                shape.style.animation = "none"; 
+                aboutMe.style.animation="none";
+                about.style.animation = "none";
+                btn.style.animation="none";
+                void aboutMe.offsetWidth; 
+                void shape.offsetWidth; 
+                void btn.offsetWidth;   
+                void about.offsetWidth;
+                about.style.animation = "aboutAnimation 1s ease-in-out forwards";
+                aboutMe.style.animation = "AboutMeAnimation 1s ease-in-out forwards"; 
+                btn.style.animation = "AboutMeAnimation 1s ease-in-out forwards";    
+                shape.style.animation = "uShapeAnimation 1s ease-in-out forwards";
+               observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(section);
+});
+
+function toggleContent() {
+    const moreContent = document.getElementById("more-content");
+    const aboutMe = document.querySelector('.about-me');
+    const about = document.querySelector(".about");
+    const btn = document.querySelector(".toggle-btn");
+    
+    if (moreContent.style.display === "none") {
+      moreContent.style.display = "block";
+      about.classList.add("push-up");
+      aboutMe.classList.add("push-up");
+      btn.classList.add('push-up');
+      btn.textContent = "Show Less";
+    } else {
+      moreContent.style.display = "none";
+      about.classList.remove("push-up");
+      aboutMe.classList.remove("push-up");
+      btn.classList.remove('push-up');
+      btn.textContent = "Show More";
+    }
+  }
+
+const year = document.querySelector('.year');
+year.textContent = `${new Date().getFullYear()}`;
+
 
 
 

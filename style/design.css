@@ -28,6 +28,17 @@
     justify-content: center;
     align-items: center;
     gap:1rem;
+    animation: logoAnimation 1.3s ease-in;
+}
+@keyframes logoAnimation {
+     0%{
+          transform: translateX(-5rem);
+          opacity: 0;
+     }
+     100%{
+          transform: translateX(0);
+     }
+     
 }
 
 .navigation-bar{
@@ -45,11 +56,108 @@
      background: #22272d;
      z-index: 1001;
 }
+
 .link-div{
      display: flex;
      flex-direction: row;
      gap:3rem;
      font-size: var(--size); 
+}
+.link-div > :nth-child(1){
+      animation:linkAnimation 0.5s ease;
+}
+.link-div > :nth-child(2){
+      animation:linkAnimation1 0.7s ease;
+}
+.link-div > :nth-child(3){
+      animation:linkAnimation3 0.9s ease;
+}
+.link-div > :nth-child(4){
+      animation:linkAnimation4 1.1s ease;
+}
+.link-div > :nth-child(5){
+      animation:linkAnimation5 1.3s ease;
+}
+@keyframes linkAnimation {
+     0%{
+               transform: translateY(2rem);}
+      100%{ transform: translateY(0);   }
+     
+}
+@keyframes linkAnimation1 {
+     0%{
+          
+               transform: translateY(4rem);
+               opacity: 0;
+      }
+      50%{
+          opacity: 0.5;
+      }
+      100%{
+               transform: translateY(0);
+           
+      }
+     
+}
+@keyframes linkAnimation2 {
+     0%{
+          
+               transform: translateY(5rem);
+               opacity: 0;
+      }
+      50%{
+          opacity: 0.5;
+      }
+      100%{
+               transform: translateY(0);
+           
+      }
+     
+}
+@keyframes linkAnimation3 {
+     0%{
+          
+               transform: translateY(6rem);
+               opacity: 0;
+      }
+      50%{
+          opacity: 0.5;
+      }
+      100%{
+               transform: translateY(0);
+           
+      }
+     
+}
+@keyframes linkAnimation4 {
+     0%{
+          
+               transform: translateY(7rem);
+               opacity: 0;
+      }
+      50%{
+          opacity: 0.5;
+      }
+      100%{
+               transform: translateY(0);
+           
+      }
+     
+}
+@keyframes linkAnimation5 {
+     0%{
+          
+               transform: translateY(8rem);
+               opacity: 0;
+      }
+      50%{
+          opacity: 0.5;
+      }
+      100%{
+               transform: translateY(0);
+           
+      }
+     
 }
 .link-div a{
      color:white;
@@ -68,10 +176,19 @@
      padding: 1rem 2rem;
      border-radius: 1rem;
      box-shadow: 0 8px 15px rgba(0, 189, 149, 0.4);
+     animation:talkBtnAnimation 1.3s ease-in-out;
 }
 .talk-btn:hover{
       box-shadow: 0 13px 20px rgba(0, 194, 154, 0.5);
       cursor: pointer;
+}
+
+@keyframes talkBtnAnimation {
+     0%{transform: translateX(5rem);
+     opacity: 0;}
+     100%{
+          transform: translateX(0);
+     }
 }
 #background-one{
      background-color:#22272d;
@@ -105,6 +222,17 @@
      text-align: justify;
      font-size: 1.2rem;
      width:75%;
+     animation:aboutMySelfAnimation 1.5s ease-in-out;
+}
+@keyframes aboutMySelfAnimation {
+      0%{
+          transform: translateX(10rem);
+          opacity: 0;
+     }
+     100%{
+          transform: translateY(0);
+     }
+     
 }
 .name-div{
      font-size: 2rem;
@@ -112,8 +240,66 @@
      flex-direction: column;
      gap:1rem;
 }
+.name-div > :nth-child(1){
+     animation:firstInroAnimation 1s ease;
+}
+.name-div > :nth-child(2){
+     animation:firstInroAnimation1 1.5s ease-in-out;
+}
+.name-div > :nth-child(3){
+     animation:firstInroAnimation2 1s ease;
+}
+@keyframes firstInroAnimation {
+     0%{
+          transform: translateY(-5rem);
+          opacity: 0;
+     }
+     100%{
+          transform: translateY(0);
+     }
+     
+}
+@keyframes firstInroAnimation1 {
+     0%{
+          transform: translateX(-10rem);
+          opacity: 0;
+     }
+     100%{
+          transform: translateY(0);
+     }
+     
+}
+@keyframes firstInroAnimation2 {
+     0%{
+          transform: translateY(5rem);
+          opacity: 0;
+     }
+     100%{
+          transform: translateY(0);
+     }
+     
+}
 .hexagon{
      transform: translateY(-5rem);
+     animation:hexAnimation 1.5s ease-in-out,bounce 1s infinite alternate 1.5s;
+}
+@keyframes hexAnimation{
+     0%{
+          transform: translateY(10rem);
+          opacity: 0;
+     }
+     100%{
+            transform: translateY(-5rem);
+     }
+     
+}
+@keyframes bounce {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(-4rem);
+  }
 }
 .talk-btn-1{
      background: linear-gradient(90deg, rgba(39, 187, 134, 1) 0%, rgba(0, 189, 149, 1) 100%);
@@ -123,10 +309,26 @@
      border-radius: 1rem;
      box-shadow: 0 8px 15px rgba(0, 189, 149, 0.4);
      width:15%;
+     animation: btn1Animation 0.5s ease-in-out forwards;
+     animation-delay: 1.5s;
+     opacity: 0;
 }
 .talk-btn-1:hover{
      box-shadow: 0 20px 27px rgba(0, 194, 154, 0.5);
       cursor: pointer;
+}
+@keyframes btn1Animation {
+     0%{
+          transform: translateY(2rem);
+          opacity: 0;
+     }
+     50%{ opacity: 0;}
+     75%{ opacity:0.75;}
+     100%{
+          transform: translateY(0);
+          opacity: 1;
+     }
+     
 }
 .icon-div{
      font-family: sans-serif,monospace;
@@ -138,27 +340,74 @@
      align-items: center;
      gap:2rem;
 }
-.icon-div a{
+.icon-div a > i{
      color:white;
      transition: all 0.3s ease;
 }
-.icon-div a:hover{
+.icon-div a > i:hover{
      transform:translateY(-1rem) scale(1.5);
      color:#006df1;
 }
+.icon-div > :nth-child(1){
+  animation:iconAnimation 0.2s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.icon-div > :nth-child(2){
+  animation:iconAnimation 0.2s ease-in-out forwards;
+  animation-delay: 2.2s;
+   opacity: 0;
+}
+.icon-div > :nth-child(3){
+  animation:iconAnimation 0.2s ease-in-out forwards;
+  animation-delay: 2.4s;
+   opacity: 0;
+}
+.icon-div > :nth-child(4){
+  animation:iconAnimation 0.2s ease-in-out forwards;
+  animation-delay: 2.6s;
+   opacity: 0;
+}
+.icon-div > :nth-child(5){
+       animation:iconAnimation 0.2s ease-in-out forwards;
+       animation-delay: 2.8s;
+       opacity: 0;
+}
+@keyframes iconAnimation {
+     0%{
+          transform: translateX(2rem);
+     }
+     100%{
+          opacity:1;
+          transform: translateX(0);
+     }
+     
+}
+
+
 #background-two{
      background-color:#151c24;
      width:100vw;
      height: 100vh;
 }
 
-#background-two .about{
-     margin-left: var(--mar);
-     margin-right: 5rem;
+.about{
      color:white;
      font-family:sans-serif,monospace;
      font-size:3rem;
-     transform: translateY(var(--mar));
+     transform: translateY(10rem);
+     opacity: 0;
+}
+@keyframes aboutAnimation {
+     from{
+          opacity: 0;
+          transform: translate(10rem,0);
+     }
+     to{
+          opacity: 1;
+          transform: translate(0,10rem);
+     }
+     
 }
 .about-me-container{
      display:flex;
@@ -169,17 +418,18 @@
      color:white;
      font-family:sans-serif,monospace;
      font-size: var(--size);
-     transform: translateY(8rem);
+     transform: translateY(5rem);
 }
 .about-me{
      font-family: sans-serif,monospace;
      font-size: 1.2rem;
      text-align: justify;
-     transform: translateY(6rem);
      margin-right: 5rem;
-    
+     transform: translateY(10rem);
+     opacity:0;
 }
-.about-me-container .for-p{
+
+.for-p{
      display:flex;
      flex-direction: column;
      gap:2rem;
@@ -191,7 +441,12 @@
      justify-items: center;
      transform: translateX(-7rem);
 }
-
+.hidden-pera{
+     font-family: sans-serif,monospace;
+     font-size: 1.2rem;
+     text-align: justify;
+     margin-right: 5rem;
+}
 /* base filter + smooth transition */
 .ushape-container .u-shape {
   filter: url(#bottomGlow1);
@@ -202,6 +457,52 @@
 .ushape-container:hover .u-shape {
   filter: url(#bottomGlowHover1);
 }
+.u-shapesvg {
+    opacity: 0; /* hide initially */
+}
+
+@keyframes uShapeAnimation {
+     from{
+          opacity: 0;
+          transform: translateX(-10rem);
+     }
+     to {
+          opacity: 1;
+          transform: translateX(0);
+     }
+}
+
+.toggle-btn {
+    background: linear-gradient(90deg, rgba(39, 187, 134, 1) 0%, rgba(0, 189, 149, 1) 100%);
+     font-size: var(--size);
+     color: white;
+     padding: 1.5rem 1.5rem;
+     border-radius: 1rem;
+     box-shadow: 0 8px 15px rgba(0, 189, 149, 0.4);
+     width:15%;
+     transform: translateY(10rem);
+     opacity:0;
+  }
+
+  .toggle-btn:hover {
+      box-shadow: 0 20px 27px rgba(0, 194, 154, 0.5);
+      cursor: pointer;
+  }
+
+  @keyframes AboutMeAnimation {
+     0%{
+             transform: translate(10rem,10rem);
+             opacity: 0;
+     }
+     100%{
+          transform: translate(0,10rem);
+          opacity: 1;
+     }
+     
+}
+
+.push-up { transform: translateY(0rem) !important; transition: transform 0.3s ease; }
+
 #background-three{
     background-color:#22272d;
      width:100vw;
@@ -337,7 +638,51 @@
 #background-four{
      background-color:#151c24;
      width:100vw;
-     height: 100vh;
+     height: 30vh;
+}
+.footer-container{
+     margin-left: 5rem;
+     margin-right: 5rem;
+     font-family: sans-serif,monospace;
+     color:white;
+     transform:translateY(5rem);
+     display: flex;
+     flex-wrap: wrap;
+     gap:13rem;
+     text-align:left;
+}
+.address-part,.important,.social,.copyright{
+     display:flex;
+     flex-direction: column;
+     gap:1rem;
+     font-size: 1.1rem;
+}
+.up-btn{
+     color:white;
+     width:4rem;
+     height: 4rem;
+     text-align: center;
+     align-content: center;
+     background-color: #00bd95;
+     border-radius: 50%;
+}
+
+/*animation part*/
+.animated-text {
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff6ec7, #7873f5, #4adede);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* For other browsers */
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 /* For mobile version */
 @media (max-width:768px) {
@@ -403,6 +748,7 @@
    }
    .hexagon{
      transform: scale(2) translate(-0.5rem,2rem);
+     animation:none;
    }
    .icon-div{
      font-size: 1.3rem;
@@ -418,22 +764,35 @@
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
-    transform: translateY(12rem);
+    margin-right: 1rem;
+    transform: translateY(10rem);
    }
-   #background-two .about{
-     margin-left:1rem;
-     margin-right: 1rem;
+.about{
+    
      font-size:1.5rem;
  }
-
- .u-shapesvg{
-     transform: scale(2) translateX(3.3rem);
- }
- .about-me{
+.about-me{
+     width: 100%;
      font-size: 1rem;
-     margin-right: 1rem;  
-     
+     font-family: sans-serif,monospace;
 }
+.hidden-pera{
+     width: 100%;
+     font-size: 1rem;
+}
+.toggle-btn {
+   width:100%;
+   padding:1rem;
+}
+.for-p{
+     gap:1rem;
+     transform: translateY(2rem);
+}
+ .u-shapesvg{
+     transform: scale(2) translate(3.3rem,-2rem)!important;
+     animation: none;
+ }
+
 .project-intro h1{
      font-size: 1.5rem;
 }
@@ -476,8 +835,15 @@
     width: 8rem;
     height: 5rem;
 }
-
-
+#background-four{
+   height: 100vh;
+}
+.footer-container{
+     margin-left:1rem;
+     margin-right: 1rem;
+     gap:5rem;
+     font-size: 1rem;
+}
 
 }
 

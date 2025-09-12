@@ -11,13 +11,14 @@
   <nav class="navigation-bar">
         <div class="logo-div">
                  <img class="logo" src="./views/logo.png" alt="This a logo" />
-                 <p>Portfolio</p>
+                 <p class="animated-text">Portfolio.</p>
         </div>
         <div class="link-div">
-             <a href="index.html" >Home</a>
-             <a href="project.html">Projects</a>
-             <a href="#background-three">Skills</a>
-              <a href="#">Certificates</a>
+             <a href="index.html">Home</a>
+             <a href="projects.html">Projects</a>
+             <a href="skils.html">Skills</a>
+             <a href="certificates.html">Certificates</a>
+             <a href="achivements.html">Achivements</a>
         </div>
        <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/"><button class="talk-btn">Let's Talk</button></a>
     </nav>
@@ -25,7 +26,7 @@
     <div class="profile-sec">
      <div class="introduction">
     <div class="name-div">
-      <h1>Hello, <span style="color:rgb(28, 125, 109);">I'm</span></h1>
+      <h1 >Hello, <span style="color:rgb(28, 125, 109);">I'm</span></h1>
       <h1 style="color:rgb(0, 195, 146)">Arafath Sarker</h1>
       <h4>MERN Stack Developer And AI Enthusiast</h4>    
     </div>
@@ -111,49 +112,58 @@
 </div>
     </section>
 <section id="background-two">
-   <h1 class="about">About <span style="color:rgb(45, 163, 140)">Me</span></h1>
+   
   <div class="about-me-container">
-    <div class="for-p">
-    <p class="about-me">
-   Hello! My name is Arafath, and I am a Computer Science and Engineering (CSE) 
-   student with a strong passion for coding, problem-solving, and continuous learning.
-    My journey in technology began with curiosity, and over time it has grown into a commitment to build innovative, practical, and impactful solutions.
-I specialize in the MERN stack (MongoDB, Express.js, React, Node.js), 
-where I enjoy creating modern, scalable, and user-friendly web applications.
- From crafting intuitive interfaces to designing efficient back-end systems,
-  I love the challenge of working across the full stack.
- 
-    Alongside web development, I am exploring the field of Artificial 
-    Intelligence and Machine Learning, aiming to design intelligent systems 
-    that can make technology more powerful and meaningful. I am particularly
-     interested in combining AI with software engineering to create solutions 
-     that improve everyday life.
-
-What motivates me is growth and curiosity — whether it’s learning a new framework,
- experimenting with emerging technologies, or tackling complex projects,
-  I’m always eager to expand my skill set. Collaboration excites me, 
-  and I’m actively seeking opportunities to work on challenging and 
-  meaningful projects where I can both contribute and learn.
+  <div class="for-p">
+  <h1 class="about">About <span style="color:rgb(45, 163, 140)">Me</span></h1>
   
-   Outside of academics and coding, I enjoy keeping an active lifestyle.
-    I love playing football and badminton, which not only keep me 
-    fit but also teach me about teamwork and strategy. 
-    I also enjoy exploring new places, as traveling allows me to experience 
-    different perspectives, cultures, and ideas — something that inspires my 
-    creativity as a developer.
-    My goal is to grow as a developer, problem-solver, and lifelong learner, while making a positive impact through technology.
-    </p>
-   <p class="about-me">
-    Feel free to reach out at  <a href="mailto:arafathmd432@gmail.com"
-style="color:black;
-text-decoration: none;
-background-color: #A9A9A9;
-border-radius: 5px;
-"
->arafathmd432@gmail.com</a>
- — I’d be happy to connect, collaborate, or even just have a chat about tech, sports, or travel!
+  <!-- Short intro -->
+  <p class="about-me">
+    Hello! My name is Arafath, and I am a Computer Science and Engineering (CSE) 
+    student with a strong passion for coding, problem-solving, and continuous learning.
+    My journey in technology began with curiosity, and over time it has grown into a commitment 
+    to build innovative, practical, and impactful solutions.
+    I specialize in the MERN stack (MongoDB, Express.js, React, Node.js), 
+    where I enjoy creating modern, scalable, and user-friendly web applications.
+    From crafting intuitive interfaces to designing efficient back-end systems,
+    I love the challenge of working across the full stack.
   </p>
+
+  <!-- Hidden content -->
+  <div id="more-content" style="display:none;">
+    <p class="hidden-pera" style="">
+      Alongside web development, I am exploring the field of Artificial 
+      Intelligence and Machine Learning, aiming to design intelligent systems 
+      that can make technology more powerful and meaningful. I am particularly
+      interested in combining AI with software engineering to create solutions 
+      that improve everyday life.
+
+      What motivates me is growth and curiosity — whether it’s learning a new framework,
+      experimenting with emerging technologies, or tackling complex projects,
+      I’m always eager to expand my skill set. Collaboration excites me, 
+      and I’m actively seeking opportunities to work on challenging and 
+      meaningful projects where I can both contribute and learn.
+    
+      Outside of academics and coding, I enjoy keeping an active lifestyle.
+      I love playing football and badminton, which not only keep me 
+      fit but also teach me about teamwork and strategy. 
+      I also enjoy exploring new places, as traveling allows me to experience 
+      different perspectives, cultures, and ideas — something that inspires my 
+      creativity as a developer.
+      My goal is to grow as a developer, problem-solver, and lifelong learner, while making a positive impact through technology.
+   <a href="mailto:arafathmd432@gmail.com"
+        style="color:black; text-decoration:none; background-color:#A9A9A9; border-radius:5px; padding:2px 6px;">
+        arafathmd432@gmail.com
+      </a>
+      — I’d be happy to connect, collaborate, or even just have a chat about tech, sports, or travel!
+    </p>
   </div>
+
+  <!-- Toggle button -->
+  <button
+      Feel free to reach out at  
+     class="toggle-btn" onclick="toggleContent()">Show More</button>
+</div>
  <div class="ushape-container">
   <svg class="u-shapesvg" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 200 300" width="35vw" height="35vw" preserveAspectRatio="xMidYMid meet">
     <defs>
@@ -218,10 +228,44 @@ border-radius: 5px;
      <button class="next-btn next-fun" type="button">Next</button>
 </div>
 </section>
-<section id="background-four">
+<footer>
+  <section id="background-four">
+    <div class="footer-container">
+      <h1 style="color:white;
+      font-family: sans-serif,monospace;
+      font-size:2rem;">Portfolio</h1>
+      <div class="address-part">
+            <strong style="font-size:1.3rem;">Cumilla Cantonment,</strong>
+            <strong style="font-size:1.3rem;">Cumilla</strong>
+            <p>arafathmd432@gmail.com</p>
+            <p>01235678900</p>
+      </div>
+       
+      <div class="important">
+        <p>About</p>
+        <p>Growers</p>
+        <p>Marchants</p>
+        <p>Partners</p>
+        <p>contact</p>
+      </div>
 
-  
+      <div class="social">
+        <p>facebook</p>
+        <p>Linkedin</p>
+        <p>Instagram</p>
+        <p>Twitter</p>
+      </div>
+
+      <div class="copyright">
+        <a class="up-btn" href="#background-one"><i class="fa-solid fa-arrow-up"></i></a>
+        <p><strong>Copyright &copy;</strong> <span class="year"></span> Arafath</p>
+      </div>
+
+    </div>
+     
 </section>
+</footer>
+
    <script src="./script/active-button.js"></script>
 </body>
 </html>
