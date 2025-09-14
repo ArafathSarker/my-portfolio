@@ -51,7 +51,7 @@ function wrapSecondChild() {
 
   // Wrap the <img> in <a>
   const a = document.createElement("a");
-  a.href = "/projects.html";
+  a.href = "./projects.html";
   img.before(a);
   a.appendChild(img);
 }
