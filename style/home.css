@@ -574,9 +574,13 @@
 .project-card1 {
   background-color: #4d5353;
 }
-.project-card2,.project-card3{
+.project-card2{
   background-color:#2e3440;
 }
+.project-card3{
+     background-color: rgb(119, 135, 147);
+}
+
 @keyframes projectCardsAnimation1 {
      from{
           opacity: 0;
@@ -630,7 +634,7 @@
 }
 .main-card > :nth-child(2){
      transition: all 0.5s;
-     transform: scale(1.3);
+     transform: scale(1.3)!important;
 }
 .right,.left{
      color:#00bd95;
@@ -770,10 +774,19 @@
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { 
+     background-position: 0% 50%; 
 }
+  50% { 
+     background-position: 100% 50%; 
+}
+  100% {
+      background-position: 0% 50%; 
+     }
+}
+
+
+
 /* For mobile version */
 @media (max-width:768px) {
 
@@ -781,23 +794,34 @@
      display: none;
     }
 
-    .three-dot{
+
+ .three-dot{
         position:absolute;
         right: 1rem;   
      }
-    .logo{
+
+
+.logo{
      width: 2rem;
      height: 2rem;
     }
+
+
 .logo +p{
      font-size: 1.2rem; 
 }
+
+
 .logo-div{
     gap:0.2rem;
 }
+
+
 .navigation-bar{
      padding:1rem;
 }
+
+
 .column-nav{
      display:flex;
      flex-direction: column;
@@ -814,41 +838,60 @@
      font-family: monospace,sans-serif;
      transform: translateY(-1rem);
 }
+
 #background-one{
      height: 110vh;
       }  
+
+
    .introduction{
      flex-direction: column;
      margin:0 1rem;
    }
+
+
    .name-div{
      font-size:1.5rem;
    }
+
+
    .profile-sec{
      flex-direction: column-reverse;
      gap:10rem;
    }
+
+
    .about-myself{
      width:100%;
      font-size: 1rem;
    }
+
+
    .talk-btn-1{
       width: 100%;
       padding: 1rem;
    }
+
+
    .hexagon{
      transform: scale(2) translate(-0.5rem,2rem);
      animation:none;
    }
+
+
    .icon-div{
      font-size: 1.3rem;
      margin:2.5rem 1rem 0rem 1rem;
      gap:1rem;
      max-width:100%;
    }
+
+
     #background-two{
      height: 150vh;
     }
+
+
    .about-me-container{
     flex-direction: column-reverse;
     justify-content: center;
@@ -857,77 +900,111 @@
     margin-right: 1rem;
     transform: translateY(10rem);
    }
+
+
 .about{
     
      font-size:1.5rem;
  }
+
+
 .about-me{
      width: 100%;
      font-size: 1rem;
      font-family: sans-serif,monospace;
 }
+
+
 .hidden-pera{
      width: 100%;
      font-size: 1rem;
 }
+
+
 .toggle-btn {
    width:100%;
    padding:1rem;
 }
+
+
 .for-p{
      gap:1rem;
      transform: translateY(2rem);
 }
+
+
  .u-shapesvg{
      transform: scale(2) translate(3.3rem,-2rem)!important;
      animation: none;
  }
 
+
 .project-intro h1{
      font-size: 1.5rem;
 }
+
+
 .project-intro p{
      width:100%;
      text-align:justify;
      font-size: 1rem;
 }
+
+
 .project-intro{
       margin-left: 1rem;
      margin-right: 1rem;
 }
+
+
 .project-card1,.project-card2,.project-card3{
   width: 20vw;
   height: 20vh;
   border-radius: 1rem;
 }
 
+
 .main-card{
      margin-left: 2rem;
      margin-right: 2rem;
 }
+
+
 .right,.left{
      width:2.5rem;
      height: 2.5rem;
 }
+
+
 .arrow-container{
      margin-left: 1rem;
      margin-right: 1rem;
      transform:translateY(13rem) ;
 }
+
+
 .button-container{
      gap:3rem;
 }
+
+
 .prev-btn {
     width: 8rem;
     height: 5rem;
 }
+
+
 .next-btn{
     width: 8rem;
     height: 5rem;
 }
+
+
 #background-four{
    height: 100vh;
 }
+
+
 .footer-container{
      margin-left:1rem;
      margin-right: 1rem;

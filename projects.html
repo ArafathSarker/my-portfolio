@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./style/design.css"/>
+    <link rel="stylesheet" href="./style/home.css"/>
+    <link rel="stylesheet" href="./style/project.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,8 +23,55 @@
         </div>
        <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/"><button class="talk-btn">Let's Talk</button></a>
     </nav>
-    <section id="background-one">
-        
+    <section id="background-five">
+       <div class="main-project">
+         <div id="first-div" class="first-project">
+  <img src="./views/project1.png" class="imageStyle" alt="Project 1 preview">
+  <h3>MealMate – Shared Meal Expense Tracker</h3>
+  <p>
+    MealMate is a full-stack web application designed
+     to automate the calculation of shared meal expenses 
+     for roommates or small groups. The idea was inspired 
+     by a real-life challenge I faced while living with 
+     five roommates during my bachelor's studies.
+</p>
+<div class="hidden">
+      <h3>See More</h3>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+     </div>
+     
+  </div>
+  <div id="second-div" class="second-project">
+  <img src="./views/project2.png" class="imageStyle" alt="Project 2 preview">
+  <h3>Break the Shape – 2D Game (C++ with SFML)</h3>
+  <p>Break the Shape is a 2D arcade-style game built 
+    in C++ using the SFML library, inspired by classic
+     brick-breaker mechanics. Players control a paddle 
+     to bounce a ball and destroy geometric shapes, with each 
+     level increasing in difficulty.</p>
+     <div class="hidden">
+      <h3>See More</h3>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+     </div>
+  </div>
+ 
+  <div id="third-div" class="third-project">
+  <img src="./views/project3.png" class="imageStyle" alt="Project 3 preview">
+  <h3>Ticket Management System – Movie Booking Application</h3>
+  <p>The Ticket Management System is a
+     C# console-based application that allows users to
+      book movie tickets, view available showtimes, and check
+       seat availability in real time. The project was built to
+        simulate the core features of a movie booking platform,
+         providing an interactive experience where users can easily
+          manage their ticket reservations.</p>
+          <div class="hidden">
+      <h3>See More</h3>
+      <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+     </div>
+  </div>
+  
+</div>
     </section>
     <footer>
   <section id="background-four">
@@ -62,6 +110,6 @@
      
 </section>
 </footer>
-   <script src="./script/active-button.js"></script>
+   <script src="./script/homeScript.js"></script>
 </body>
 </html>

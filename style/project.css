@@ -1,0 +1,163 @@
+#background-five{
+    background-color: rgb(34, 39, 45);
+    width:100vw;
+    height: 100vh;
+}
+.main-project img{
+    width:20vw;
+    height: auto;
+    padding: 1rem;
+}
+.main-project{
+    display:flex;
+    flex-wrap: wrap;
+    gap:7vw;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color:white;
+    
+}
+.main-project > :nth-child(1),.main-project > :nth-child(2)
+,.main-project > :nth-child(3){
+     border-radius: 1rem;
+    font-family: sans-serif,monospace;
+    font-size: 1.2rem;
+    width:24vw;
+    position: relative;
+    overflow: hidden;
+}
+.main-project > :nth-child(1){
+    background-color: rgb(73, 78, 81);
+   
+}
+.main-project > :nth-child(2){
+    background-color: rgb(106, 122, 134); 
+}
+.main-project > :nth-child(3){
+    background-color: rgb(46, 52, 64);
+
+}
+.first-project > h3,.second-project > h3,.third-project > h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.first-project > p,.second-project > p,.third-project > p{
+    padding:1rem;
+    text-align: justify;
+}
+.hidden{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-items: center;
+    transform:translateY(10rem);
+    transition: all 0.3s ease;
+}
+.first-project:hover .hidden,.second-project:hover .hidden,
+.third-project:hover .hidden{
+    transform:translateY(0);
+    opacity: 1;
+    background: linear-gradient(
+  to top,
+  rgb(2, 120, 95) 0%,     /* darker/shiny green at bottom */
+  rgb(3, 190, 147) 50%,   /* normal color in middle */
+  rgba(3, 190, 147, 0.2) 100% /* watery fade at top */
+);}
+.hidden > h3{
+    
+    font-family:sans-serif,monospace;
+    font-size: 1.5rem;
+}
+.hidden > a{
+    color: black;
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    text-align: center;
+    align-content: center;
+    margin-top: 2rem;
+}
+#first-div{
+    opacity:0;
+    animation:FirstDivAnimation 1s ease-in-out forwards;
+}
+@keyframes FirstDivAnimation {
+    from{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+#second-div{
+    opacity:0;
+    animation:FirstDivAnimation1 1s ease-in-out forwards;
+}
+@keyframes FirstDivAnimation1 {
+    from{
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+#third-div{
+    opacity:0;
+    animation:FirstDivAnimation2 1s ease-in-out forwards;
+}
+@keyframes FirstDivAnimation2 {
+    from{
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@media (max-width:768px) {
+    #background-five{
+        height: 200vh;
+    }
+    .main-project img{
+    width:100%;
+    padding: 1rem;
+}
+   .main-project > :nth-child(1),.main-project > :nth-child(2)
+,.main-project > :nth-child(3){
+    width:100vw;
+}
+
+.main-project{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.first-project > h3,.second-project > h3,.third-project > h3{
+    font-size: 1.5rem;
+}
+.first-project > p,.second-project > p,.third-project > p{
+    padding:1rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+}

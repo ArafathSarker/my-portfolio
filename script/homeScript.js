@@ -30,22 +30,50 @@ faBar.addEventListener('click',()=>{
  });
 }
 
+const container = document.querySelector(".main-card");
 const nextBtns = document.querySelectorAll(".next-fun");
 const prevBtns = document.querySelectorAll(".prev-fun");
-const container = document.querySelector(".main-card");
 
+// Function to wrap the second child dynamically
+function wrapSecondChild() {
+  // Remove any existing <a> inside container
+  container.querySelectorAll("a").forEach(a => {
+    const img = a.querySelector("img");
+    if (img) a.replaceWith(img); // move img out of <a>
+  });
+
+  // Get current second child
+  const secondChild = container.children[1];
+  if (!secondChild) return;
+
+  const img = secondChild.querySelector("img");
+  if (!img) return;
+
+  // Wrap the <img> in <a>
+  const a = document.createElement("a");
+  a.href = "/projects.html";
+  img.before(a);
+  a.appendChild(img);
+}
+
+// Initial wrap on page load
+wrapSecondChild();
+
+// Next button click
 nextBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     const lastCard = container.lastElementChild;
-    container.prepend(lastCard); // move last to first
+    container.prepend(lastCard);   // move last to first
+    wrapSecondChild();             // wrap new second child
   });
 });
 
-
+// Prev button click
 prevBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     const firstCard = container.firstElementChild;
     container.appendChild(firstCard); // move first to last
+    wrapSecondChild();                 // wrap new second child
   });
 });
 
