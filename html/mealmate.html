@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../style/home.css"/>
+     <link rel="stylesheet" href="../style/project.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <nav class="navigation-bar">
+        <div class="logo-div">
+                 <img class="logo" src="../views/logo.png" alt="This a logo" />
+                 <p class="animated-text">Portfolio.</p>
+        </div>
+        <div class="link-div">
+             <a href="../index.html">Home</a>
+             <a href="../projects.html">Projects</a>
+             <a href="../skils.html">Skills</a>
+             <a href="../certificates.html">Certificates</a>
+             <a href="../achivements.html">Achivements</a>
+        </div>
+       <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/"><button class="talk-btn">Let's Talk</button></a>
+    </nav>
+    <section id="bg-1">
+      <div class="mealmate">
+         <div class="details">
+        <h1 > Mealmate</h1>
+        <p>A Real-World Project Built from a Real-Life Need!</p>
+        As a Computer Science and Engineering student living away from home, I encountered a real-life problem that inspired me to create my website, MealMate.
+I live with five other roommates, and one day, one of them asked if there was a way to automate the calculation of our meal or food expenses. That moment sparked the idea for MealMate—a solution to help small groups manage shared meal costs more efficiently.
+With my knowledge of React.js, Node.js, and Express.js, I decided to build the application myself. React’s component-based architecture allowed me to structure and manage the frontend efficiently, although I did face some rendering issues during development.
+For the backend, I created a REST API using Express.js and used MongoDB (NoSQL) as the database. I handled database operations using the Mongoose library. For user authentication, I implemented JWT (JSON Web Tokens) and Passport.js.
+While I made several mistakes along the way, the project was a great learning experience. It took me around two months to fully develop both the frontend and backend. Personally, I found that frontend state and UI management was more challenging compared to backend development.
+I deployed the frontend on Vercel, which is well-suited for React applications. However, I found Vercel less optimal for backend services like Express.js, so I deployed the backend on Render. Render works well for Express.js but has a limitation—it puts the server to sleep after 15 minutes of inactivity to save costs. Fortunately, the server responds normally after the first request.
+
+🌐 Try it out: https://lnkd.in/eg8iMwve
+🔐 Feel free to sign up and explore the platform. Feedback is always welcome!
+
+        </div>
+        <div class="picture-preview">
+            <button class="prev-bro"><i class="fa-solid fa-chevron-left"></i></button>
+            <button  class="next-bro"><i class="fa-solid fa-chevron-right"></i></button>
+            <img  class="projectImage" alt="Projects picture preview">
+        </div>
+      </div>
+    </section>
+    <footer>
+  <section id="background-four">
+    <div class="footer-container">
+      <h1 style="color:white;
+      font-family: sans-serif,monospace;
+      font-size:2rem;">Portfolio</h1>
+      <div class="address-part">
+            <strong style="font-size:1.3rem;">Cumilla Cantonment,</strong>
+            <strong style="font-size:1.3rem;">Cumilla</strong>
+            <p>arafathmd432@gmail.com</p>
+            <p>01235678900</p>
+      </div>
+       
+      <div class="important">
+        <p>About</p>
+        <p>Growers</p>
+        <p>Marchants</p>
+        <p>Partners</p>
+        <p>contact</p>
+      </div>
+
+      <div class="social">
+        <p>facebook</p>
+        <p>Linkedin</p>
+        <p>Instagram</p>
+        <p>Twitter</p>
+      </div>
+
+      <div class="copyright">
+        <a class="up-btn" href="#background-one"><i class="fa-solid fa-arrow-up"></i></a>
+        <p><strong>Copyright &copy;</strong> <span class="year"></span> Arafath</p>
+      </div>
+
+    </div>
+     
+</section>
+</footer>
+   <script src="../script/homeScript.js"></script>
+</body>
+</html>
