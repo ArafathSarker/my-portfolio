@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+     <title>Achievements - Portfolio</title>
+    <link rel="stylesheet" href="./style/achievements.css">
     <link rel="stylesheet" href="./style/home.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -22,9 +23,35 @@
         </div>
        <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/"><button class="talk-btn">Let's Talk</button></a>
     </nav>
-    <section id="background-one">
-        
-    </section>
+     <!-- 🔹 Achievements Section -->
+   <section class="achievements-section">
+    <h1 class="achievements-title"><span style="color:#02c491">Honors</span> & Awards</h1>
+    
+    <div class="achievement-card hidden">
+      <div class="achievement-logo">
+        <img src="./views/achievements/uulogo.jpeg" alt="Uttara University Logo">
+      </div>
+      <div class="achievement-content">
+        <h2>2nd Place – Intra-University Programming Contest</h2>
+        <p class="achievement-meta">
+          <i class="fa-solid fa-building-columns"></i> Issued by <strong>Uttara University</strong> · Jun 2024
+        </p>
+        <p class="achievement-meta">
+          <i class="fa-solid fa-user-group"></i> Associated with <strong>Uttara University</strong>
+        </p>
+        <p class="achievement-desc">
+          Awarded 2nd place among 20 teams in an intra-university programming contest 
+          focused on <strong>algorithmic problem-solving</strong>, <strong>data structures</strong>, 
+          and <strong>competitive coding</strong>. Demonstrated strong analytical and coding 
+          skills under time pressure.
+        </p>
+      </div>
+      <div class="achievement-award">
+        <img src="./views/achievements/award.jpeg" alt="Award Certificate">
+      </div>
+    </div>
+  </section>
+
     <footer>
   <section id="background-four">
     <div class="footer-container">
@@ -63,5 +90,6 @@
 </section>
 </footer>
    <script src="./script/homeScript.js"></script>
+    <script src="./script/achievements.js"></script>
 </body>
 </html>

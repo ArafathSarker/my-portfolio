@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style/home.css"/>
+    <link rel="stylesheet" href="./style/certificate.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,9 +23,34 @@
         </div>
        <a target="_blank" href="https://www.linkedin.com/in/arafath-sarker/"><button class="talk-btn">Let's Talk</button></a>
     </nav>
-    <section id="background-one">
-        
-    </section>
+  <section id="certificates" class="certificates-container">
+  <h2 class="certificates-title">My <span style="color:rgb(45, 163, 140)">Certificates</span></h2>
+  
+  <div class="certificates-grid">
+    <div class="certificate-card">
+      <img src="../views/certificates/cert1.png" alt="Certificate 1">
+      <h3>Book Reading Competition 2024</h3>
+      <p>Issued by UTTARA UNIVERSITY</p>
+    </div>
+    <div class="certificate-card">
+      <img src="../views/certificates/cert2.png" alt="Certificate 2">
+      <h3>Intra-University Programming Contest 2024</h3>
+      <p>Issued by UTTARA UNIVERSITY</p>
+    </div>
+    <div class="certificate-card">
+      <img src="../views/certificates/cert3.png" alt="Certificate 3">
+      <h3>Business Case Study" of National Innovation Competition 2024</h3>
+      <p>Issued by IUBAT</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 Modal for zoom -->
+<div id="certModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
     <footer>
   <section id="background-four">
     <div class="footer-container">
@@ -62,6 +88,7 @@
      
 </section>
 </footer>
+   <script src="./script/certificate.js"></script>
    <script src="./script/homeScript.js"></script>
 </body>
 </html>

@@ -138,7 +138,10 @@
 #bg-1{
     width: 100vw;
     height: 100vh;
-    background-color:rgb(34, 39, 45);;
+    background-color:rgb(34, 39, 45);
+    background-size: cover;       /* ensures background covers the area */
+    background-position: center;  /* centers the background */
+    background-repeat: no-repeat;
 }
 
 .picture-preview,.picture-preview-break,.picture-preview-ticket{
@@ -311,7 +314,8 @@ animation: AboutSubHeadingAnimation 1s ease-in-out;
     text-align: justify;
 }
 #bg-1{
-    height:150vh;
+    height:auto;
+    min-height: 100vh;
 }
 .mealmate{
   margin-left: 1rem;

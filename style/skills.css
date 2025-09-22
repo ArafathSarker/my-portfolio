@@ -1,0 +1,126 @@
+.skills-container {
+  padding: 4rem 8%;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif, monospace;
+}
+#bg-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(34, 39, 45);
+    background-size: cover;       /* ensures background covers the area */
+    background-position: center;  /* centers the background */
+    background-repeat: no-repeat;
+}
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  animation: SkillTitleAnimation 1s ease-in-out;
+}
+@keyframes SkillTitleAnimation {
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity:1;
+    transform: translateX(0);
+  }
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: #2e3440;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.skill-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #07be92;
+}
+
+.skill-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #334155;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  transition: width 1.5s ease;
+}
+
+/* 🔹 RESPONSIVE DESIGN FOR TABLETS */
+@media (max-width: 992px) {
+   #bg-2 {
+        height: 80vh; /* slightly smaller height for tablets */
+    }
+  .skills-container {
+    padding: 3rem 5%;
+  }
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skill-card {
+    padding: 1.5rem;
+  }
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* 🔹 RESPONSIVE DESIGN FOR PHONES */
+@media (max-width: 576px) {
+  #bg-2 {
+        height: auto;         
+        min-height: 100vh;      
+    }
+  .skills-container {
+    padding: 2rem 5%;
+  }
+  .skills-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .skill-card {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+  .skill-icon {
+    font-size: 2rem;
+  }
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+}
