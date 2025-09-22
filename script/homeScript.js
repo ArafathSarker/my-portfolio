@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.toggleContent = toggleContent; // make accessible in HTML onclick
 
   // --------------------------
-  // Project image slider
+  // Project image slider Mealmate
   // --------------------------
   const preBtn = document.querySelector(".prev-bro");
   const nexBtn = document.querySelector(".next-bro");
@@ -206,6 +206,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if(nexBtn) nexBtn.addEventListener("click", clickNext);
   if(preBtn) preBtn.addEventListener("click", clickPrev);
+
+  // --------------------------
+  // Project image slider Break the hape
+  // --------------------------
+  const preBtnBreak = document.querySelector(".prev-bro-break");
+  const nexBtnBreak = document.querySelector(".next-bro-break");
+  const projectImageBreak  = document.querySelector(".projectImageBreak");
+  const imageListBreak = ["breaktheshape1.png","breaktheshape2.png","breaktheshape3.png",
+    "breaktheshape4.png"
+  ];
+  let indexBreak = 0;
+
+  if(projectImageBreak) projectImageBreak.src = "../views/breakTheShape/" + imageListBreak[indexBreak];
+
+  function clickNextBreak(){
+    if(!projectImageBreak) return;
+    indexBreak = (indexBreak + 1) % imageListBreak.length;
+    projectImageBreak.src = "../views/breakTheShape/" + imageListBreak[indexBreak];
+  }
+
+  function clickPrevBreak(){
+    if(!projectImageBreak) return;
+    indexBreak = (indexBreak - 1 + imageListBreak.length) % imageListBreak.length;
+    projectImageBreak.src = "../views/breakTheShape/" + imageListBreak[indexBreak];
+  }
+
+  if(nexBtnBreak) nexBtnBreak.addEventListener("click", clickNextBreak);
+  if(preBtnBreak) preBtnBreak.addEventListener("click", clickPrevBreak);
+
+  // --------------------------
+  // Project image slider Break the hape
+  // --------------------------
+  const preBtnTicket = document.querySelector(".prev-bro-ticket");
+  const nexBtnTicket = document.querySelector(".next-bro-ticket");
+  const projectImageTicket  = document.querySelector(".projectImageTicket");
+  const imageListTicket = ["ticket1.png","ticket2.png","ticket3.png","ticket4.png"
+    ,"ticket5.png"
+  ];
+  let indexTicket = 0;
+
+  if(projectImageTicket) projectImageTicket.src = "../views/ticketManagement/" + imageListTicket[indexTicket];
+
+  function clickNextTicket(){
+    if(!projectImageTicket) return;
+    indexTicket = (indexTicket + 1) % imageListTicket.length;
+    projectImageTicket.src = "../views/ticketManagement/" + imageListTicket[indexTicket];
+  }
+
+  function clickPrevTicket(){
+    if(!projectImageTicket) return;
+    indexTicket = (indexTicket - 1 + imageListTicket.length) % imageListTicket.length;
+    projectImageTicket.src = "../views/ticketManagement/" + imageListTicket[indexTicket];
+  }
+
+  if(nexBtnTicket) nexBtnTicket.addEventListener("click", clickNextTicket);
+  if(preBtnTicket) preBtnTicket.addEventListener("click", clickPrevTicket);
 
   // --------------------------
   // Update year
