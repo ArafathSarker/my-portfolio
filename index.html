@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <nav class="navigation-bar">
+  <nav id="nav-id" class="navigation-bar">
         <div class="logo-div">
                  <img class="logo" src="./views/logo.png" alt="This a logo" />
                  <p class="animated-text">Portfolio.</p>
@@ -164,36 +164,61 @@
       Feel free to reach out at  
      class="toggle-btn" onclick="toggleContent()">Show More</button>
 </div>
- <div class="ushape-container">
-  <svg class="u-shapesvg" xmlns="http://www.w3.org/2000/svg" viewBox="50 0 200 300" width="35vw" height="35vw" preserveAspectRatio="xMidYMid meet">
+<div class="ushape-container">
+  <svg class="u-shapesvg" xmlns="http://www.w3.org/2000/svg" viewBox="20 -4 189.959 207.282" width="35vw" height="35vw" preserveAspectRatio="xMidYMid meet">
     <defs>
-      <path id="u-shape" d="M50 0 L50 200 A100 100 0 0 0 250 200 L250 0 Z"/>
-      <mask id="u-mask"><use href="#u-shape" fill="white"/></mask>
+      <!-- Base Shape -->
+      <path id="u-shape" d="M 164.041 57.718
+      L 195.959 113.000
+      A 14 14 0 0 1 195.959 127.000
+      L 164.041 182.282
+      A 14 14 0 0 1 151.917 189.282
+      L 88.083 189.282
+      A 14 14 0 0 1 75.959 182.282
+      L 44.041 127.000
+      A 14 14 0 0 1 44.041 113.000
+      L 75.959 57.718
+      A 14 14 0 0 1 88.083 50.718
+      L 151.917 50.718
+      A 14 14 0 0 1 164.041 57.718
+      Z" transform="rotate(30 120 120)"/>
+     
+      <!-- Mask for image -->
+      <mask id="u-mask">
+        <path d="M164.041 57.718 195.959 113A14 14 0 01195.959 127L164.041 182.282A14 14 0 01151.917 189.282L88.083 189.282A14 14 0 0175.959 182.282L43 125 34 46 110 10Z"
+              fill="white"
+              transform="rotate(30 120 120)"/>
+      </mask>
 
+      <!-- Gradient border -->
       <linearGradient id="g1" x1="0" x2="1">
         <stop offset="0%" stop-color="#27BB86"/>
         <stop offset="100%" stop-color="#00BD95"/>
       </linearGradient>
 
-      <!-- filters as you had them -->
-      <filter id="bottomGlow1" x="-70%" y="-70%" width="240%" height="240%">
-        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(0, 194, 154, 0.3)" />
-        <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(0, 194, 154, 0.3)" />
-        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0, 194, 154, 0.3)" />
-      </filter>
+      <!-- Hover glow -->
       <filter id="bottomGlowHover1" x="-70%" y="-70%" width="240%" height="240%">
-        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(0, 194, 154, 0.3)" />
-        <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="rgba(0, 194, 154, 0.6)" />
-        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0, 194, 154, 1)" />
+        <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="rgba(0, 194, 154, 0.7)" />
+        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0, 194, 154, 0.9)" />
       </filter>
     </defs>
 
-    <!-- add a class here; remove inline filter -->
-    <use href="#u-shape" class="u-shape" fill="url(#g1)"/>
+    <!-- Border only, no fill, no initial glow -->
+    <use href="#u-shape" class="u-shape" 
+         fill="transparent" 
+         stroke="url(#g1)" 
+         stroke-width="3"/>
 
-    <image href="./views/profile1.png" x="0" y="0" width="300" height="300" mask="url(#u-mask)"/>
+    <!-- Profile image clipped inside -->
+    <image href="views/profile.png"
+           x="15.041" y="-30"
+           width="200.918" height="240.564"
+           preserveAspectRatio="xMidYMax slice"
+           mask="url(#u-mask)"/>
   </svg>
 </div>
+
+
   </div>
 </section>
 
@@ -257,7 +282,7 @@
       </div>
 
       <div class="copyright">
-        <a class="up-btn" href="#background-one"><i class="fa-solid fa-arrow-up"></i></a>
+        <a class="up-btn" href="#nav-id"><i class="fa-solid fa-arrow-up"></i></a>
         <p><strong>Copyright &copy;</strong> <span class="year"></span> Arafath</p>
       </div>
 

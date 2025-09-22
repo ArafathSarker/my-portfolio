@@ -315,14 +315,14 @@ animation: AboutSubHeadingAnimation 1s ease-in-out;
 }
 #bg-1{
     height:auto;
-    min-height: 100vh;
+    min-height: 150vh;
 }
 .mealmate{
   margin-left: 1rem;
   margin-right: 1rem;
   flex-direction:column-reverse;
   transform: translateY(2rem);
-   justify-content:left;
+  justify-content:left;
 }
 .details{
     width:100%;

@@ -6,7 +6,9 @@
     margin: 0;
     padding: 0;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 :root{
      --bold:700;
      --gap:1rem;
